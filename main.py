@@ -1,13 +1,18 @@
-val = int(input("Enter your value: "))
+with open('./ADS2021_cvicenie2data.txt') as f:
+    towns = f.readlines()[:]
 
-def fib(n, memo = {}):
-    print(memo)
-    if n in memo:
-        return memo[n]
-    if n <= 2:
-        return 1
+arr = []
 
-    memo[n] = (fib(n - 1, memo) + fib(n - 2, memo))
-    return memo[n]
-    
-print(fib(val))
+def createArray():
+    global towns
+    for i in range(len(towns)):
+        x = towns[i].split()
+        x = list(map(int, x))
+        arr.append(x)
+
+createArray()
+
+def fun():
+    print
+
+fun()
